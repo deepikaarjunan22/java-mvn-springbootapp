@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: devops-deploy
   labels:
-    app: devops-deploy-lbl
+    app: devops-deployment
 spec:
   replicas: 3
   selector:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: devops-container
-        image: deepikaarjunan/devops-java:v1
+        image: deepikaarjunan/java-project
         ports:
         - containerPort: 8080
 ---
@@ -30,7 +30,7 @@ spec:
   selector:
     app: devops-deploy-lbl
 
-  type: LoadBalancer
+  type: NodePort
   ports:
-    port: 8080
-    targetPort: containerPort
+    port: 80
+    targetPort: 8080
