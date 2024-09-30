@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: devops-container
-        image: deepikaarjunan/java-project:1
+        image: deepikaarjunan/spring-boot:v1
         ports:
         - containerPort: 8289
 ---
