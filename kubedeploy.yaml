@@ -28,7 +28,7 @@ metadata:
     app: devops-app
 spec:
   selector:
-    app: devops-deploy-lbl
+    app: devops-deployment
 
   type: NodePort
   ports:
