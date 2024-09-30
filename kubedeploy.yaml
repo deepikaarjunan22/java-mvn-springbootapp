@@ -30,8 +30,7 @@ spec:
   selector:
     app: devops-deploy-lbl
 
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - nodePort: 31027
     port: 8080
-    targetPort: 8289
+    targetPort: containerPort
