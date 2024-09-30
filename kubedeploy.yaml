@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: devops-container
-        image: deepikaarjunan/devops-java
+        image: deepikaarjunan/devops-java:latest
         ports:
         - containerPort: 8080
 ---
