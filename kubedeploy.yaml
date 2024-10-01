@@ -19,3 +19,20 @@ spec:
         image: deepikaarjunan/spring-boot:image1
         ports:
         - containerPort: 8289
+
+---
+apiVersion: v1
+kind: Services
+metadata:
+  label: port-svc
+spec:
+  selector:
+    matchLabels:
+      app: springboot-deploy-java
+      
+  type: NodePort
+  ports:
+  - NodePort: 32100
+    port: 80
+    protocol: TCP
+    targetPort: 8289
