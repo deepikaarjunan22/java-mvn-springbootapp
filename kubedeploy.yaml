@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: java-deployment
+  name: springboot-deploy
   labels:
-    app: java-deployment-label
+    app: springboot-deploy-java
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: springboot-app
+      app: my-project
   template:
     metadata:
       labels:
-        app: springboot-app
+        app: my-project
     spec:
       containers:
       - name: springboot-container
-        image: deepikaarjunan/spring-boot:v2
+        image: deepikaarjunan/spring-boot:image1
         ports:
         - containerPort: 8289
