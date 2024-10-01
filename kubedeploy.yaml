@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: java-container
-        image: deepikaarjunan/spring-boot:v3
+        image: deepikaarjunan/spring-boot:v2
         ports:
         - containerPort: 8080
