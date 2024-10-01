@@ -33,6 +33,5 @@ spec:
   type: NodePort
   ports:
   - NodePort: 32100
-    port: 80
-    protocol: TCP
+    port: 8289
     targetPort: 8289
