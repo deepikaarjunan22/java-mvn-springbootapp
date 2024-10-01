@@ -1,37 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-deploy
+  name: java-deployment
   labels:
-    app: springboot-deploy-java
+    app: java-deploy-label
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-project
+      app: java-project
   template:
     metadata:
       labels:
-        app: my-project
+        app: java-project
     spec:
       containers:
-      - name: springboot-container
-        image: deepikaarjunan/spring-boot:image1
+      - name: java-container
+        image: deepikaarjunan/spring-boot:v3
         ports:
         - containerPort: 8080
-
----
-apiVersion: v1
-kind: Services
-metadata:
-  label: port-svc
-spec:
-  selector:
-    matchLabels:
-      app: springboot-deploy-java
-      
-  type: NodePort
-  ports:
-  - NodePort: 32100
-    port: 8080
-    targetPort: 8080
