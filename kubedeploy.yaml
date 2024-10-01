@@ -18,7 +18,7 @@ spec:
       - name: springboot-container
         image: deepikaarjunan/spring-boot:image1
         ports:
-        - containerPort: 8289
+        - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -33,5 +33,5 @@ spec:
   type: NodePort
   ports:
   - NodePort: 32100
-    port: 8289
-    targetPort: 8289
+    port: 8080
+    targetPort: 8080
