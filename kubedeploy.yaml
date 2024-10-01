@@ -18,7 +18,7 @@ spec:
       - name: test-container
         image: deepikaarjunan/spring-boot:v3
         ports:
-        - containerPort: 8080
+        - containerPort: 8040
 ---
 
 apiVersion: v1
