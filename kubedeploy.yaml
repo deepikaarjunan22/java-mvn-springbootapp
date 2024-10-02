@@ -31,8 +31,7 @@ spec:
     port: 8080
     targetport: 8080
   selector:
-    matchLabels:
-      app: test-project
+    app: test-project
 
 
     
