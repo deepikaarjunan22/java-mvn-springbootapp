@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: test-container
-        image: deepikaarjunan/spring-boot:v3
+        image: deepikaarjunan/java-image:1
         ports:
         - containerPort: 8080
 
