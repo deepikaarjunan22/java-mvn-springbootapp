@@ -30,8 +30,8 @@ spec:
   selector:
     app: test-deploy-label
   ports:
-  - port: 8080
-    targetPort: 8289
+    - port: 8080
+      targetPort: 8289
     
 
 
